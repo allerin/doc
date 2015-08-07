@@ -1,33 +1,6 @@
-begin:meta
-  title 'Test quiz'
-
-  start_day 1
-  start_month 10
-  start_year 2015
-  start_hour 9
-  start_minute 00
-
-  finish_day 1
-  finish_month 10
-  finish_year 2015
-  finish_hour 13
-  finish_minute 00
-
-  # how many times can the student take the quiz
-  repeat 1
-
-  # 0: nothing
-  # 1: show number of correct answers
-  # 2: show which were correct of the ones submitted
-  # 3: show complete solution
-  feedback 3
-end:meta
-
-
 begin:text
 Long text over several lines which will be parsed by Markdown.
 end:text
-
 
 
 # Multiple-choice questions with a single correct answer
