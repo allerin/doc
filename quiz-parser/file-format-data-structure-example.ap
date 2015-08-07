@@ -1,0 +1,156 @@
+[
+    [0] {
+        "meta" => {
+                   "title" => "Test quiz",
+               "start_day" => 1,
+             "start_month" => 10,
+              "start_year" => 2015,
+              "start_hour" => 9,
+            "start_minute" => 0,
+                  "repeat" => 1,
+                "feedback" => 3
+        }
+    },
+    [1] {
+        "text" => "Long text over several lines which will be parsed by Markdown."
+    },
+    [2] {
+        "multiple_choice" => {
+                 "text" => "What is the largest US state?",
+              "options" => [
+                [0] [
+                    [0] "right",
+                    [1] "Alaska",
+                    [2] "You really know your stuff"
+                ],
+                [1] [
+                    [0] "wrong",
+                    [1] "Hawaii",
+                    [2] "Not big enough."
+                ],
+                [2] [
+                    [0] "wrong",
+                    [1] "Texas",
+                    [2] "That's pretty big, but think colder."
+                ]
+            ],
+            "randomize" => "false"
+        }
+    },
+    [3] {
+        "multiple_choice" => {
+                 "text" => "What distribution is on the graph?",
+              "picture" => [
+                [0] "https://example.com/logo.svg",
+                [1] "y=400"
+            ],
+              "options" => [
+                [0] [
+                    [0] "right",
+                    [1] "Normal"
+                ],
+                [1] [
+                    [0] "wrong",
+                    [1] "Binomial"
+                ],
+                [2] [
+                    [0] "wrong",
+                    [1] "Poisson"
+                ]
+            ],
+            "randomize" => "false",
+                 "hint" => [
+                [0] "Look at zero",
+                [1] "Loo at the tails"
+            ]
+        }
+    },
+    [4] {
+        "text" => "### Now comes the hard questionsDont feel bad..."
+    },
+    [5] {
+        "multiple_choice" => {
+               "text" => "When $a \ne 0$, there...",
+            "options" => [
+                [0] [
+                    [0] "right",
+                    [1] "yes",
+                    [2] "That was good"
+                ],
+                [1] [
+                    [0] "wrong",
+                    [1] "no"
+                ]
+            ]
+        }
+    },
+    [6] {
+        "draw" => {
+              "text" => "Draw lines with your mouse where the graph have a negative derivative.",
+            "canvas" => [
+                [0] "https://example.com/plot.png",
+                [1] "x=300"
+            ]
+        }
+    },
+    [7] {
+        "random" => [
+            [0] {
+                "multiple_choice" => {
+                         "text" => "What distribution is on the graph?",
+                      "picture" => [
+                        [0] "https://example.com/logo.svg",
+                        [1] "y=400"
+                    ],
+                      "options" => [
+                        [0] [
+                            [0] "right",
+                            [1] "Normal"
+                        ],
+                        [1] [
+                            [0] "wrong",
+                            [1] "Binomial"
+                        ],
+                        [2] [
+                            [0] "wrong",
+                            [1] "Poisson"
+                        ]
+                    ],
+                    "randomize" => "false",
+                         "hint" => [
+                        [0] "Look at zero",
+                        [1] "Loo at the tails"
+                    ]
+                }
+            },
+            [1] {
+                "multiple_choice" => {
+                         "text" => "What is the largest US state?",
+                      "options" => [
+                        [0] [
+                            [0] "right",
+                            [1] "Alaska",
+                            [2] "You really know your stuff"
+                        ],
+                        [1] [
+                            [0] "wrong",
+                            [1] "Hawaii",
+                            [2] "Not big enough."
+                        ],
+                        [2] [
+                            [0] "wrong",
+                            [1] "Texas",
+                            [2] "That's pretty big, but think colder."
+                        ]
+                    ],
+                    "randomize" => "false"
+                }
+            }
+        ]
+    },
+    [8] {
+        "survey" => {
+            "text" => "What did you think about the quiz?"
+        }
+    }
+]
