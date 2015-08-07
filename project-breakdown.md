@@ -32,7 +32,7 @@ This can be broken down into the following sub projects
 * `.quiz` file parser
 * Generate Bootstrap quiz
 * Parse through CommonMark and MathJax
-* Add Ajax to quiz
+* Add WebSockets to quiz
 * `picture`, `canvas` and download from Github repo
 * Center `picture`, `canvas` and tables
 * Teacher admin panel, File admin panel, Student panel
@@ -62,11 +62,11 @@ The default Bootstrap widgets should be fine, but there should be a clear separa
 Strings and text blocks should now be parsed though the CommonMark parser and MathJax library added.
 
 
-##### Add Ajax to quiz
+##### Add WebSockets to quiz
 
-Everytime a student clicks on an answer it should be sent back to the web server (AJAX), so in case the students computer crashes, the student can just login again and no progress have been lost. Everything should be saved in MongoDB. I will provide a Dockerfile for building the MongoDB container.
+Everytime a student clicks on an answer it should be sent back to the web server (WebSockets), so in case the students computer crashes, the student can just login again and no progress have been lost. Everything should be saved in MongoDB. I will provide a Dockerfile for building the MongoDB container.
 
-This milestone should also include the interpretation of `feedback` in the `meta` block described in `doc/file-format.md` and the `hint` feature. When `hint` is used, a hint button is added to the question, and if the student clicks this, Ajax fetches the hint, and registers it along a timestamp.
+This milestone should also include the interpretation of `feedback` in the `meta` block described in `doc/file-format.md` and the `hint` feature. When `hint` is used, a hint button is added to the question, and if the student clicks this, WebSockets fetches the hint, and registers it along a timestamp.
 
 A "Hand in" button should be at the bottom, and when pressed a "Are you sure?" Bootstrap modal. If "yes", then the feedback is given accordingly to the `feedback` level and the quiz is registered as handed in.
 
@@ -81,17 +81,24 @@ The pictures in `picture` and `canvas` should be downloaded and hosted on the qu
 I think by default `picture`, `canvas` and tables are left aligned, so a small post-processing should done to center these.
 
 
-##### Teacher admin panel, File admin panel, Student panel
+##### Admin panel, Auditor panel, Student panel
 
-repeat, randomize, random, start, finish,
+Drawings will come once approved.
+
 
 ##### CAS login
 
 There is an ACL concept for logging in for both teachers and students, where the memberships are extracted from an existing LDAP server. 
 
+See source code for the current implementation
 
+https://github.com/dtu-compute/php-cas-login
 
+and pictures of what it looks like
 
+https://github.com/dtu-compute/doc/tree/master/cas-login
+
+A similar login module should be written in Ruby.
 
 ### File admin panel
 
@@ -103,4 +110,13 @@ kursus site login, askbot login, stackedit login + kursus select + config
 
 
 ### Port PHP podcast parser to Ruby
+
+Source code for the current implementation can be seen at
+
+https://github.com/dtu-compute/php-podcast
+
+and pictures of what it looks like
+
+
+
 
