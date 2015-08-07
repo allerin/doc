@@ -85,10 +85,10 @@ I think by default `picture`, `canvas` and tables are left aligned, so a small p
 
 Drawings will come once approved.
 
-# 0: nothing
-# 1: show number of correct answers
-# 2: show which were correct of the ones submitted
-# 3: show complete solution
+* 0: nothing
+* 1: show number of correct answers
+* 2: show which were correct of the ones submitted
+* 3: show complete solution
 
 
 ##### CAS login
