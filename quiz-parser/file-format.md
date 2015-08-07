@@ -4,7 +4,7 @@ A `.quiz` file is an UTF-8 encoded file written in a text editor. It contains bl
 
 Blocks and commands are case-insensitive.
 
-When parsing the file, syntax errors should be cought and an error message of what the problm is, and for cases where a line number can be given, this should also be displayed.
+When parsing the file, syntax errors should be cought and an error message of what the problem is, and for cases where a line number can be given, this should also be displayed.
 
 
 ### Meta block
