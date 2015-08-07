@@ -4,54 +4,11 @@ A `.quiz` file is an UTF-8 encoded file written in a text editor. It contains bl
 
 Blocks and commands are case-insensitive.
 
-When parsing the file, syntax errors should be cought and an error message of what the problem is, and for cases where a line number can be given, this should also be displayed.
-
-
-### Meta block
-
-The first block must be a meta block. Here is an example
-
-```
-begin:meta
-  title 'Test quiz'
-
-  start_day 1
-  start_month 10
-  start_year 2015
-  start_hour 9
-  start_minute 00
-
-  finish_day 1
-  finish_month 10
-  finish_year 2015
-  finish_hour 13
-  finish_minute 00
-
-  # how many times can the student take the quiz
-  repeat 1
-
-  # 0: nothing
-  # 1: show number of correct answers
-  # 2: show which were correct of the ones submitted
-  # 3: show complete solution
-  feedback 3
-end:meta
-```
-
-A meta block like the above most contain all the commands shown here. An argument for a command must be quoted with either `"` or `'` if it is not a word in the regex sense. `title` in this example is such an example. Had the argument been `Test` then the command could have been written as `title Test`. Had the argument been `Martin's quiz` then it should have been written as `title 'Martin''s quiz'`.
-
-`title` sets the html title.
+An argument for a command must be quoted with either `"` or `'` unless it is a word (from a regex point of view), then it doesn't need to be quoted.
 
 New lines and comments are allowed inside the block. Comments starts with any number of spaces and tabs followed by `#`.
 
-`repeat` is the number of times a student may take this quiz. In this example just once.
-
-`feedback` is what should happen after the student have submitted the quiz.
-
-* `0` no feedback other than a confirmation that the answered have been submitted successfully and perhaps a hash as proof.
-* `1` shows the number of correct answers of those answered.
-* `2` puts e.g. a light green background on those answers that are correct of those answered. This level also displays teacher comments for those questions if the questions uses that feature. Teacher comments are explained later.
-* `3` shows the complete solution even for those questions the student haven't answered.  This level also displays teacher comments for those questions if the questions uses that feature.
+When parsing the file, syntax errors should be cought and an error message of what the problem is, and for cases where a line number can be given, this should also be displayed.
 
 
 ## Text block
@@ -97,7 +54,7 @@ begin:multiple_choice
 end:multiple_choice
 ```
 
-`text` takes one argument which is parsed though [CommonMark](http://commonmark.org/). `text` are required.
+`text` takes one argument which is parsed though [CommonMark](http://commonmark.org/). `text` are required. Had the argument been `Test` then the command could have been written as `text Test`. Had the argument been `Martin's quiz` then it should have been written as `text 'Martin''s quiz'`.
 
 `right` and `wrong` are the possible answers for the question. Multiple choice can only have one `right`. The first argument is the text of the answer. The second argument is a teacher comment, which was mentioned in the meta block section. This is displayed next to the question if `feedback` level is 2 or 3, but only for the selected answer. Both arguments are parsed though CommonMark. As seen here there can be one or more spaces and tabs between commands and arguments and also between arguments. At least one `right` and one `wrong` is required.
 
