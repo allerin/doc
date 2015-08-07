@@ -104,9 +104,14 @@ A similar login module should be written in Ruby.
 
 ### Course webdesign
 
+A Bootstrap version similar to http://01005.mat.dtu.dk/ and http://introstat.compute.dtu.dk/ should be made.
+
+
 ### Login modules
 
-kursus site login, askbot login, stackedit login + kursus select + config
+* website login
+* askbot login
+* stackedit login + course select menu + config couchdb path
 
 
 ### Port PHP podcast parser to Ruby
@@ -117,6 +122,4 @@ https://github.com/dtu-compute/php-podcast
 
 and pictures of what it looks like
 
-
-
-
+https://github.com/dtu-compute/doc/tree/master/podcast
