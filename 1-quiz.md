@@ -8,24 +8,24 @@ This can be broken down into the following sub projects
 * Add WebSockets to quiz
 * `picture`, `canvas` and download from Github repo
 * Center `picture`, `canvas` and tables
-* Teacher admin panel, File admin panel, Student panel
+* Admin panel, Auditor panel, Student panel
 * CAS login
 
 
 ##### `.quiz` file parser (Ruby)
 
-`doc/file-format.quiz` is an example of how a teacher might write a quiz.
+`file-format.quiz` is an example of how a teacher might write a quiz.
 
-`doc/file-format-data-structure-example.rb` is a hand written example of how the data structure could be.
+`file-format-data-structure-example.rb` is a hand written example of how the data structure could be.
 
-`doc/file-format-data-structure-example.ap` and `doc/file-format-data-structure-examfile-format-data-structure-example.pp` are output from `doc/file-format-data-structure-example.rb`.
+`file-format-data-structure-example.ap` and `file-format-data-structure-examfile-format-data-structure-example.pp` are output from `file-format-data-structure-example.rb`.
 
-`doc/file-format.md` gives hopefully a complete explanation of the file format.
+`file-format.md` gives hopefully a complete explanation of the file format.
 
 
 ##### Generate Bootstrap quiz (Ruby, Bootstrap)
 
-After a Ruby `.quiz` file parser have been written which can parse `doc/file-format.quiz` into a data structure, a Bootstrap quiz have to be generated. This involves making a Bootstrap Ruby template and inserting the static content from the data structure, so the outcome is a html file which can be opened in a browser.
+After a Ruby `.quiz` file parser have been written which can parse `file-format.quiz` into a data structure, a Bootstrap quiz have to be generated. This involves making a Bootstrap Ruby template and inserting the static content from the data structure, so the outcome is a html file which can be opened in a browser.
 
 The default Bootstrap widgets should be fine, but there should be a clear separation between questions.
 
@@ -77,5 +77,3 @@ and pictures of what it looks like
 https://github.com/dtu-compute/doc/tree/master/cas-login
 
 A similar login module should be written in Ruby.
-
-
