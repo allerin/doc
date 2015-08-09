@@ -85,6 +85,15 @@ I think by default `picture`, `canvas` and tables are left aligned, so a small p
 
 Drawings will come once approved.
 
+These seams to be popular CRUD interfaces for Ruby
+
+* http://activeadmin.info/
+* https://github.com/sferik/rails_admin
+* https://github.com/activescaffold/active_scaffold
+
+Which fits best for our needs?
+
+
 * 0: nothing
 * 1: show number of correct answers
 * 2: show which were correct of the ones submitted
