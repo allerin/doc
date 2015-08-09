@@ -90,8 +90,9 @@ These seams to be popular CRUD interfaces for Ruby
 * http://activeadmin.info/
 * https://github.com/sferik/rails_admin
 * https://github.com/activescaffold/active_scaffold
+* https://github.com/typus/typus
 
-Which fits best for our needs?
+Which fits best for our needs? Or are there other that you can recommend?
 
 
 * 0: nothing
