@@ -22,6 +22,33 @@ This can be broken down into the following sub projects
 
 `file-format.md` gives hopefully a complete explanation of the file format.
 
+In the repository of the gem, please provide a `Dockerfile` similar this this
+
+```Dockerfile
+FROM fedora:22
+
+RUN dnf -y update && \
+    dnf -y install ruby git && \
+    dnf clean all
+
+RUN cd / && \
+    git clone https://github.com/#name of gem# && \
+    cd /#name of gem# && \
+    bundle install
+
+ENTRYPOINT ["run.rb", "test.quiz"]
+```
+
+where `run.rb` take a quiz file as argument. To test other quiz files then `test.quiz` one could
+
+```bash
+NAME="#name of gem"
+git clone https://github.com/$NAME
+cd $NAME
+docker build -t $NAME .
+
+docker run --rm -v $(pwd):/$NAME $NAME a_new_test.quiz
+```
 
 ##### Generate Bootstrap quiz (Ruby, Bootstrap)
 
