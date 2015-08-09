@@ -42,7 +42,7 @@ ENTRYPOINT ["run.rb", "test.quiz"]
 where `run.rb` take a quiz file as argument. To test other quiz files then `test.quiz` one could
 
 ```bash
-NAME="#name of gem"
+NAME="#name of gem#"
 git clone https://github.com/$NAME
 cd $NAME
 docker build -t $NAME .
